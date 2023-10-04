@@ -18,10 +18,10 @@ def rle_to_mask(mask_rle, shape):
     starts, lengths = [np.asarray(x, dtype=int) for x in (s[0:][::2], s[1:][::2])]
     starts -= 1
     ends = starts + lengths
-    img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
+    img = np.zeros(shape[0] * shape[1], dtype=np.uint16)
     for lo, hi in zip(starts, ends):
         img[lo:hi] = 1
-    return img.reshape(shape).T  # Needed to align to RLE direction
+    return img.reshape(shape)
 
 
 def overlay_segmentation(image, mask, alpha=0.5, color='Reds'):
@@ -45,7 +45,7 @@ def overlay_segmentation(image, mask, alpha=0.5, color='Reds'):
 
 
 # image_path = "images/image1.png"
-image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/train/case123/case123_day20/scans/slice_0067_266_266_1.50_1.50.png"
+image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/train/case123/case123_day0/scans/slice_0071_266_266_1.50_1.50.png"
 
 img = mpimg.imread(image_path)
 
@@ -53,7 +53,7 @@ img = mpimg.imread(image_path)
 plt.imshow(img, cmap="gray")
 plt.title("16-bit Grayscale Image")
 
-rle_string = "15323 4 15587 8 15852 10 16117 11 16383 12 16649 12 16915 12 17181 12 17447 12 17713 12 17979 12 18245 12 18511 12 18777 12 19043 12 19309 12 19575 12 19841 12 20107 12 20373 12 20639 12 20905 12 21171 12 21437 12 21703 12 21969 12 22235 12 22501 12 22767 12 23033 12 23299 12 23565 12 23831 12 24097 12 24363 12 24629 12 24895 12 25161 13 25427 13 25693 14 25959 14 26224 15 26489 16 26755 17 27020 19 27286 20 27552 21 27818 21 28084 21 28350 22 28616 22 28882 22 29147 23 29413 23 29678 24 29944 24 30210 25 30476 25 30742 25 31008 25 31274 25 31540 25 31806 25 32072 24 32338 24 32604 24 32871 22 33137 22 33403 21 33669 21 33936 19 34203 17 34469 14 34736 12 35003 11 35271 8 35539 3"
+rle_string = "15314 2 15575 11 15840 13 16104 17 16369 19 16633 22 16897 25 17162 27 17428 27 17693 29 17959 29 18225 29 18490 31 18756 31 19021 32 19287 32 19552 33 19818 33 20083 34 20349 34 20615 34 20881 34 21147 33 21412 34 21678 33 21944 32 22210 29 22476 27 22742 24 23008 22 23274 18 23540 16 23807 14 24073 11 24341 6"
 mask = rle_to_mask(rle_string, img.shape)
 img_overlay = overlay_segmentation(img, mask)
 
