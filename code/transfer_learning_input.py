@@ -15,6 +15,5 @@ Look into 'Build InceptionV3 over a custom input tensor'
 
 from PIL import Image
 
-img = Image.open(r"C:/Users\tdsel/Documents/courses/cisc867/cisc867_deep_learning_project/data/train/case2/case2_day1"
-                 r"/scans/slice_0001_266_266_1.50_1.50.png")
+img = Image.open(r"/data/train/case2/case2_day1/scans/slice_0001_266_266_1.50_1.50.png")
 img.show("Scan")
