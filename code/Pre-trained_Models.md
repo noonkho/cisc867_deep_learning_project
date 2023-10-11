@@ -39,7 +39,7 @@ E.g., Model (Size, params, depth)
 - scale input pixels between -1 and 1
 - Default input size is 299 x 299 
 
-## [EfficientNetB4] [5] (75MB, 19.5M, 258)
+## [EfficientNetB4][5] (75MB, 19.5M, 258)
 
 - Trained on Imagenet
 - EfficientNet models expect their inputs to be float tensors of pixels with values in the [0-255] range
