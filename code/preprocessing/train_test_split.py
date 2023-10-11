@@ -1,6 +1,8 @@
 """
 Perform a train_test k-fold validation split.
 k = 5 currently so we always train with 80% of the patient cases and leave 20% as holdout
+This doesn't actually move any files around on the filesystem, but it does create text documents
+with each case split into either the fold or the holdout
 
 Code from https://www.kaggle.com/code/carnozhao/uwmgit-mmsegmentation-end-to-end-submission
 """
