@@ -1,5 +1,6 @@
 # Pre-trained Models
 
+## Inputs
 Finding input formats for the various pre-trained models we hope to use for
 transfer learning.
 
@@ -18,7 +19,7 @@ A last, optional step, is fine-tuning, which consists of unfreezing the entire m
 Potential models:
 E.g., Model (Size, params, depth)
 
-## [VGG16][2] (528 MB, 138.4M, 16)
+### [VGG16][2] (528 MB, 138.4M, 16)
 
 - The default input size for this model is 224 x 224.
 - Was trained on Imagenet
@@ -27,19 +28,19 @@ E.g., Model (Size, params, depth)
 - convert the input images from RGB to BGR, then will zero-center each color channel with respect to the ImageNet
   dataset, without scaling
 
-## [ResNet50V2][3] (98 MB, 25.6M, 103)
+### [ResNet50V2][3] (98 MB, 25.6M, 103)
 
 - The default input size for this model is 224 x 224.
 - Trained on Imagenet
 - scale input pixels between -1 and 1
 
-## [InceptionV3][4] (92 MB, 23.9M, 189)
+### [InceptionV3][4] (92 MB, 23.9M, 189)
 
 - Trained on Imagenet
 - scale input pixels between -1 and 1
 - Default input size is 299 x 299 
 
-## [EfficientNetB4][5] (75MB, 19.5M, 258)
+### [EfficientNetB4][5] (75MB, 19.5M, 258)
 
 - Trained on Imagenet
 - EfficientNet models expect their inputs to be float tensors of pixels with values in the [0-255] range
