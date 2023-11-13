@@ -45,15 +45,16 @@ def overlay_segmentation(image, mask, alpha=0.5, color='Reds'):
 
 
 # image_path = "images/image1.png"
-image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/train/case123/case123_day0/scans/slice_0071_266_266_1.50_1.50.png"
+image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/cropped_database/case101_day20_slice_0067.png"
 
 img = mpimg.imread(image_path)
 
 # Show image
 plt.imshow(img, cmap="gray")
 plt.title("16-bit Grayscale Image")
+# plt.show()
 
-rle_string = "15314 2 15575 11 15840 13 16104 17 16369 19 16633 22 16897 25 17162 27 17428 27 17693 29 17959 29 18225 29 18490 31 18756 31 19021 32 19287 32 19552 33 19818 33 20083 34 20349 34 20615 34 20881 34 21147 33 21412 34 21678 33 21944 32 22210 29 22476 27 22742 24 23008 22 23274 18 23540 16 23807 14 24073 11 24341 6"
+rle_string = "23809 2 24041 7 24273 10 24505 14 24737 17 24969 20 25202 23 25436 24 25669 26 25903 26 26137 27 26371 27 26605 27 26839 27 27074 26 27308 26 27543 25 27777 25 28012 24 28246 23 28481 22 28715 21 28949 21 29184 19 29418 19 29652 18 29887 16 30122 14 30357 12 30592 10 30829 4"
 mask = rle_to_mask(rle_string, img.shape)
 img_overlay = overlay_segmentation(img, mask)
 
