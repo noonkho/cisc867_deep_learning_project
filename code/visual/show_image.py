@@ -44,18 +44,20 @@ def overlay_segmentation(image, mask, alpha=0.5, color='Reds'):
     plt.show()
 
 
-# image_path = "images/image1.png"
-image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/cropped_database/case101_day20_slice_0067.png"
-
+# image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/cropped_database/case101_day20_slice_0067.png"
+# image_path = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/train/case101/case101_day20/scans/slice_0067_266_266_1.50_1.50.png'
+image_path = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/true_masks/case24_day25_slice_0097_large_bowel.png'
 img = mpimg.imread(image_path)
 
 # Show image
 plt.imshow(img, cmap="gray")
 plt.title("16-bit Grayscale Image")
-# plt.show()
+plt.show()
 
-rle_string = "23809 2 24041 7 24273 10 24505 14 24737 17 24969 20 25202 23 25436 24 25669 26 25903 26 26137 27 26371 27 26605 27 26839 27 27074 26 27308 26 27543 25 27777 25 28012 24 28246 23 28481 22 28715 21 28949 21 29184 19 29418 19 29652 18 29887 16 30122 14 30357 12 30592 10 30829 4"
-mask = rle_to_mask(rle_string, img.shape)
-img_overlay = overlay_segmentation(img, mask)
+# Stomach
+# rle_string = "23809 2 24041 7 24273 10 24505 14 24737 17 24969 20 25202 23 25436 24 25669 26 25903 26 26137 27 26371 27 26605 27 26839 27 27074 26 27308 26 27543 25 27777 25 28012 24 28246 23 28481 22 28715 21 28949 21 29184 19 29418 19 29652 18 29887 16 30122 14 30357 12 30592 10 30829 4"
+# rle_string = '31313 2 31577 7 31841 10 32105 14 32369 17 32633 20 32898 23 33164 24 33429 26 33695 26 33961 27 34227 27 34493 27 34759 27 35026 26 35292 26 35559 25 35825 25 36092 24 36358 23 36625 22 36891 21 37157 21 37424 19 37690 19 37956 18 38223 16 38490 14 38757 12 39024 10 39293 4'
+# mask = rle_to_mask(rle_string, img.shape)
+# img_overlay = overlay_segmentation(img, mask)
 
 
