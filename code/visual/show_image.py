@@ -46,7 +46,7 @@ def overlay_segmentation(image, mask, alpha=0.5, color='Reds'):
 
 # image_path = "/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/cropped_database/case101_day20_slice_0067.png"
 # image_path = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/train/case101/case101_day20/scans/slice_0067_266_266_1.50_1.50.png'
-image_path = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/true_masks/case24_day25_slice_0097_large_bowel.png'
+image_path = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/true_masks/case24_day25_slice_0096_small_bowel.png'
 img = mpimg.imread(image_path)
 
 # Show image

@@ -56,17 +56,17 @@ def get_masks(csv_file, output_folder, target_size=(234, 234)):
         # if i == 3:
         #     break
      
-        if row['segmentation']:
-            # print(row['segmentation'])
-            # break
-            img_arr = rle_decode(row['segmentation'], target_size)
-            # print(img_arr)
-            # Convert the np array to an image
-            image = Image.fromarray(np.uint8(img_arr))
+        # if row['segmentation']:
+        # print(row['segmentation'])
+        # break
+        img_arr = rle_decode(row['segmentation'], target_size)
+        # print(img_arr)
+        # Convert the np array to an image
+        image = Image.fromarray(np.uint8(img_arr))
 
-            # Save the true mask
-            image_output_path = os.path.join(output_folder, f"{row['id']}_{row['class']}.png")
-            image.save(image_output_path)
+        # Save the true mask
+        image_output_path = os.path.join(output_folder, f"{row['id']}_{row['class']}.png")
+        image.save(image_output_path)
 
 
 root_dir = '/Users/echingkho/Desktop/University/Master/1st_year/Fall/dl_cisc_867/project/uw-madison-gi-tract-image-segmentation/'

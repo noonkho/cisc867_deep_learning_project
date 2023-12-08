@@ -9,6 +9,15 @@ matplotlib = "*"
 imageio = "*"
 pillow = "*"
 tqdm = "*"
+segmentation-models-pytorch = "*"
+pandas = "*"
+glob2 = "*"
+joblib = "*"
+ipython = "*"
+opencv-python = "*"
+scikit-learn = "*"
+torch = "*"
+timm = "*"
 
 [dev-packages]
 
